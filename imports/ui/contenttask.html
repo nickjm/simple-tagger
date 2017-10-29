@@ -1,0 +1,20 @@
+<template name="content">
+    <div class="container">
+        <div class="prompt">
+            <label for="source"></label>
+            <p name="source">{{samples.text}}</p>
+            <label for="out-1"></label>
+            <p name="out-1">{{samples.text}}</p>
+            <label for="out-2"></label>
+            <p name="out-2">{{samples.text}}</p>
+        </div>
+        <div class="response">
+            <form>
+                <input class="sentiment-positive" type="button" name="first" value="First" accesskey="j"/>
+                <input class="sentiment-negative" type="button" name="second" value="Second" accesskey="k"/>
+                <input class="content-option" type="button" name="both"  value="Both" accesskey="l"/>
+                <input class="sentiment-neither" type="button" name="neither"  value="Neither" accesskey=";"/>
+            </form>
+        </div>
+    </div>
+</template>

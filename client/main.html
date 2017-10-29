@@ -1,0 +1,29 @@
+<head>
+  <title>simple</title>
+</head>
+
+<template name="layout">
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/sentiment">Sentiment</a>
+        <a href="/content">Content Preservation</a>
+        <a href="/fluency">Fluency</a>
+    </div>
+    <hr>
+    {{> Template.dynamic template=main}}
+</template>
+
+<template name="home">
+  <div class="instructions">
+      <h1>Style Transfer Project - Results Evaluation Tasks</h1>
+      <p>
+          Click on a link in the navbar to start one of the three task types. You can stop or move to a different task type at any time!
+      </p>
+      <h2>Instructions for different tasks:</h2>
+      <ul>
+          <li><a href="#">Sentiment Classification Instructions</a></li>
+          <li><a href="#">Content Preservation Quality Instructions</a></li>
+          <li><a href="#">Fluency Rating Instructions</a></li>
+      </ul>
+  </div>
+</template>

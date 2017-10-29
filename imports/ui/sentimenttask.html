@@ -1,0 +1,18 @@
+<template name="sentiment">
+    <div class="container">
+        <div class="prompt">
+            {{#if Template.subscriptionsReady}}
+            <p>{{samples}}</p>
+            {{else}}
+            <p>Loading...</p>
+            {{/if}}
+        </div>
+        <div class="response">
+            <form class="sentiment-response">
+                <input class="sentiment-positive" type="button" name="positive" value="Positive" accesskey="j"/>
+                <input class="sentiment-negative" type="button" name="negative" value="Negative" accesskey="k"/>
+                <input class="sentiment-neither" type="button" name="neither"  value="Neither" accesskey="l"/>
+            </form>
+        </div>
+    </div>
+</template>
