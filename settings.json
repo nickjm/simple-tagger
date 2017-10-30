@@ -1,0 +1,8 @@
+{
+   "galaxy.meteor.com": {
+        "env": {
+                "MONGO_URL": "mongodb://styleuser:stylepass@aws-us-east-1-portal.28.dblayer.com:24948,aws-us-east-1-portal.27.dblayer.com:24948/styletransfer?ssl=true",
+                "MONGO_OPLOG_URL": "mongodb://styleuser:stylepass@aws-us-east-1-portal.28.dblayer.com:24948,aws-us-east-1-portal.27.dblayer.com:24948/local?authSource=styletransfer"
+        }
+    }
+}

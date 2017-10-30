@@ -1,12 +1,20 @@
 <template name="content">
     <div class="container">
         <div class="prompt">
-            <label for="source"></label>
-            <p name="source">{{samples.text}}</p>
-            <label for="out-1"></label>
-            <p name="out-1">{{samples.text}}</p>
-            <label for="out-2"></label>
-            <p name="out-2">{{samples.text}}</p>
+            <table>
+                <tr>
+                    <th>Source</th>
+                    <td>{{samples.original}}</td>
+                </tr>
+                <tr>
+                    <th>First</th>
+                    <td>{{samples.first}}</td>
+                </tr>
+                <tr>
+                    <th>Second</th>
+                    <td>{{samples.second}}</td>
+                </tr>
+            </table>
         </div>
         <div class="response">
             <form>

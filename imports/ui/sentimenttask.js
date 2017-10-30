@@ -1,6 +1,6 @@
 import { Template } from 'meteor/templating';
 
-import { Samples, SentimentResponses, FluencyResponses, ContentResponses } from '../api/tasks.js';
+import { Samples, SentimentResponses } from '../api/tasks.js';
 
 import { Sampler } from './helpers.js';
 
@@ -14,10 +14,13 @@ if (Meteor.isClient) {
 
     Template.sentiment.helpers({
         samples() {
+            if (done) {
+                return current_sample;
+            }
             newSentimentDep.depend();
             current_sample = null;
             while (current_sample == null) {
-                current_sample = Sampler.sample(SentimentResponses);
+                current_sample = Sampler.sample();
                 current_source = Sampler.randomSource();
                 if (SentimentResponses.find({sample_id: current_sample.sample_id, source: current_source}).count() >= 2) {
                     current_sample = null;

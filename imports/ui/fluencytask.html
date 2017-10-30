@@ -1,7 +1,11 @@
 <template name="fluency">
     <div class="container">
         <div class="prompt">
-            <p>{{samples.text}}</p>
+            {{#if Template.subscriptionsReady}}
+            <p>{{samples}}</p>
+            {{else}}
+            <p>Loading...</p>
+            {{/if}}
         </div>
         <div class="response">
             <form>
